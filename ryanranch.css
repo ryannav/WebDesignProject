@@ -1,0 +1,234 @@
+*{box-sizing: border-box;}
+
+body {
+    font-family:Arial, Helvetica, sans-serif;
+    color: #555555;
+    background-color: #EAEAEA;
+
+}
+header {
+    background-color: #600CAC;
+    text-align: center;
+    color: #FFFFFF;
+    
+}
+header a{
+    text-decoration: none;
+}
+h1 {
+    margin-top: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    letter-spacing: .25em;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    margin-bottom: 0;
+}
+nav {
+    padding: 0;
+    text-align: center;
+    font-weight: bold;
+    font-size: 120%;
+}
+nav a {text-decoration: none;}
+
+nav li{
+    border-bottom: 1px solid #000033;
+}
+
+h2 {
+    text-shadow: 1px 1px 1px #CCCCCC;
+    color: #00A875;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding-left: 0;
+    font-size: 1.2em;
+}
+
+footer { 
+    padding: 2em;
+    font-size: 75%;
+    font-style: italic;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #FFFFFF;
+}
+
+.smoltitle{
+    font-size: 120%;
+    font-weight: bold;
+    color: #0400ff;
+}
+.helper{
+    font-size: 100%;
+    font-weight: bold;
+}
+main {
+    padding-top: 1px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    display: block;
+    background-color: #FFFFFF;
+    overflow: auto;
+}
+
+
+#wrapper {
+    background-color: #00ffd5;
+    background: linear-gradient(#600CAC,#d5bcec);
+    background-repeat: no-repeat;
+}
+#wrapperimg {
+    background-color: #00ffd5;
+    background: linear-gradient(#600CAC,#d5bcec);
+    background-repeat: no-repeat;
+}
+#coverimg {
+    height: 200px;
+    background-image: url(cover.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+#mapimg {
+    height: 500px;
+    background-image: url(ranch-map.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.mallist{clear: left;}
+.animals{text-align: center;
+    float: left;
+font-size: medium;
+margin-bottom: 20px;}
+.row {
+    display: flex;
+    margin-bottom: 5px;
+  }
+  .column {
+    flex: 33.33%;
+    padding: 5px;
+  }
+video {
+    display: block;
+    margin: auto;
+  }
+#vid {
+    float: center;
+}
+.pic{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+h1 :link{
+    color: #ffffff;
+}
+h1 :visited{
+    color: #00ffd5;
+}
+h1 :hover{
+    color: #0400ff;
+}
+
+nav :link{
+    color: #ffffff;
+}
+nav :visited{
+    color: #00ffd5;
+}
+nav :hover{
+    color: #0400ff;
+}
+table{
+    border: 3px solid #0400ff;
+    border-collapse: collapse;
+}
+td, th {
+    padding: .75em;
+    border: 2px solid #0400ff;
+}
+th{background-color: #00ffd5;
+text-decoration: solid;
+font-weight: bold;}
+td{
+    text-align: center;
+}
+form{
+    display: flex;
+    flex-direction: column;
+flex-wrap: nowrap;}
+input[type="submit"]{
+    background-color: #00ffd5;
+}
+
+@media screen and (min-width: 600px) {
+    nav li{
+        border-bottom: none;
+    }
+    nav ul{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+    }
+    section{
+        margin-left: 2em;
+        margin-right: 2em;
+    }
+    .flow{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    #wrapper{
+        margin: auto;
+        width: 80%;
+        box-shadow: 4px #00ffd5;
+    }
+    #wrapperimg{
+        margin: auto;
+        width: 80%;
+        box-shadow: 4px #00ffd5;
+    }
+    nav{
+        text-align: left;
+        padding-left: 1em;
+    }
+    nav li{
+        margin-bottom: 40px;
+      }
+    @supports (display: grid){
+        nav ul{
+            flex-direction: column;
+            padding-top: 1em;
+        }
+        
+        header{grid-area: header;}
+        nav{grid-area: nav;}
+        main{grid-area: main;}
+        footer{grid-area: footer;}
+        #wrapperimg{
+            display: grid;
+            grid-template:
+            "header header"
+            "img nav"
+            "main nav"
+            "footer nav"
+            / 1fr 180px;
+        }
+        #wrapper{
+            display: grid;
+            grid-template:
+            "header header"
+            "main nav"
+            "footer nav"
+            / 1fr 180px;
+        }
+        
+      }
+}
